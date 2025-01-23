@@ -1,0 +1,45 @@
+import React from 'react';
+import {View, Text, Image, ScrollView, TextInput} from 'react-native';
+
+const App = () => {
+  return (
+    <ScrollView
+    style={{
+      backgroundColor: '#BFBBA9',
+    }}
+    >
+      <Text
+      style={{
+        textAlign: 'center',
+         fontSize: 32,
+         fontWeight: 'bold'
+      }}>Nebril</Text>
+      <View
+        style={{
+          flex: 1,
+          justifyContent:"center",
+          alignItems:"center"
+        }}>
+        <Text>Advance Mobile </Text>
+        <Image
+          source={{
+            uri:'https://th.bing.com/th/id/R.63047ae94657c6cefda291138c5ad76c?rik=jrdUAv9oRKGVuA&riu=http%3a%2f%2fwww.dumpaday.com%2fwp-content%2fuploads%2f2017%2f03%2frandom-pictures-33-2.jpg&ehk=qyN0BotHhfarLi40WWV5iKhaJQ2r0mrf857I4Xj%2bTpg%3d&risl=&pid=ImgRaw&r=0',
+          }}
+          style={{width: 300, height: 300}}
+        />
+      </View
+      >
+      <TextInput
+        style={{
+          height: 30,
+          borderColor: 'gray',
+          borderWidth: 1,
+          textAlign: 'center'
+        }}
+        defaultValue="You can type in me"
+      />
+    </ScrollView>
+  );
+};
+
+export default App;

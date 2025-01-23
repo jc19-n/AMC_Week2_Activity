@@ -1,0 +1,44 @@
+import React, {useState} from 'react';
+import {Text, StyleSheet} from 'react-native';
+import {SafeAreaView, SafeAreaProvider} from 'react-native-safe-area-context';
+
+const TextInANest = () => {
+  const[titleText, setTitleText] = useState("Nebril, Jereyl Cherven");
+  const bodyText = 'Nebril, Jerey Cherven, From GRC taking a Information Technology 3rd year college and what i did in our sysarc is im a database and some part of documents. At ayoko ng ituloy ang aming sysarc dahil meron kaming naisip na bagong gagawin.#ubosnangperakodahilsapyesangmotor.';
+
+  const onPressTitle = () => {
+    setTitleText("Nebril, Jereyl Cherven [pressed]");
+  };
+
+return (
+    <SafeAreaProvider>
+      <SafeAreaView style={styles.container}>
+        <Text style={styles.baseText}>
+          <Text style={styles.titleText} onPress={onPressTitle}>
+            {titleText}
+            {'\n'}
+            {'\n'}
+          </Text>
+          <Text numberOfLines={5}><Text style={{color: "blue"}}>Nebril, Jerey Cherven,</Text> From GRC taking a Information Technology 3rd year college and what i did in our <Text style={{color: "red"}}>sysarc is im a database</Text> and some part of documents. At ayoko ng ituloy ang aming sysarc dahil meron kaming naisip na bagong gagawin.#ubosnangperakodahilsapyesangmotor.'</Text>
+        </Text>
+      </SafeAreaView>
+    </SafeAreaProvider>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+  },
+  baseText: {
+    textAlign: 'center',
+    fontFamily: 'Cochin',
+  },
+  titleText: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+});
+
+export default TextInANest;
